@@ -20,6 +20,8 @@ $ pip install .
 
 ## Usage
 
+`G96Reporter`
+
 ```python
 from g96reporter import G96Reporter
 
@@ -33,9 +35,18 @@ $ gmx -f traj.g96 -o traj.trr
 $ gmx -f traj.g96 -o traj.xtc
 ```
 
+`G96RPMDReporter`
+
+```python
+from g96reporter import G96Reporter, G96RPMDReporter
+
+simulation.reporters.append(G96Reporter("traj_centroid.g96", 100))
+simulation.reporters.append(G96RPMDReporter("traj_bead.g96", 100))
+```
+
 ## Example
 
-Here is an example in folder `examples`, in which `G96Reporter` was used instead of `PDBReporter`.
+See folder `examples/`.
 
 ## License
 

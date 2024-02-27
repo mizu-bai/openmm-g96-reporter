@@ -1,3 +1,9 @@
+# trajectories
+*.g96
+*.gro
+*.trr
+*.xtc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
