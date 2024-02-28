@@ -31,8 +31,8 @@ simulation.reporters.append(G96Reporter("traj.g96", 1000))
 Then the `traj.g96` trajectory can be converted to `trr` and `xtc` format:
 
 ```
-$ gmx -f traj.g96 -o traj.trr
-$ gmx -f traj.g96 -o traj.xtc
+$ gmx trjconv -f traj.g96 -o traj.trr
+$ gmx trjconv -f traj.g96 -o traj.xtc
 ```
 
 `G96RPMDReporter`
