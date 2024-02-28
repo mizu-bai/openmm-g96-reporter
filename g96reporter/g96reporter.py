@@ -48,7 +48,7 @@ class G96Reporter:
         steps = self._reportInterval \
             - simulation.currentStep % self._reportInterval
 
-        return (steps, True, False, False, False, self._enforcePeriodicBox)
+        return (steps, True, True, False, False, self._enforcePeriodicBox)
 
     def report(
         self,
@@ -61,11 +61,6 @@ class G96Reporter:
             simulation (Simulation): The Simulation to generate a report for.
             state (State): The current state of the simulation.
         """
-
-        state = simulation.context.getState(
-            getPositions=True,
-            getVelocities=True,
-        )
 
         g96mol = G96Mol(
             title="",
@@ -135,7 +130,7 @@ class G96RPMDReporter:
         steps = self._reportInterval \
             - simulation.currentStep % self._reportInterval
 
-        return (steps, True, False, False, False, self._enforcePeriodicBox)
+        return (steps, False, False, False, False, self._enforcePeriodicBox)
 
     def report(
         self,
